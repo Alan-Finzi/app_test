@@ -3,8 +3,7 @@ import 'package:intl/intl.dart';
 
 import '../data/data_base_helper.dart';
 import '../model/Scheduling_model.dart';
-import '../model/cancha_model.dart';
-import '../widget/agendar_button.dart'; // Necesario para formatear las fechas
+import '../widget/agendar_button.dart';
 
 
 class HomeScreen extends StatefulWidget {
@@ -42,21 +41,21 @@ class _HomeScreenState extends State<HomeScreen> {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Text("Confirmar eliminación"),
-          content: Text("¿Estás seguro de que deseas eliminar este agendamiento?"),
+          title: const Text("Confirmar eliminación"),
+          content: const Text("¿Estás seguro de que deseas eliminar este agendamiento?"),
           actions: [
             TextButton(
               onPressed: () {
                 Navigator.of(context).pop();
               },
-              child: Text("Cancelar"),
+              child: const Text("Cancelar"),
             ),
             TextButton(
               onPressed: () async {
                 await deleteAppointment(id);
                 Navigator.of(context).pop();
               },
-              child: Text("Eliminar"),
+              child: const Text("Eliminar"),
             ),
           ],
         );
