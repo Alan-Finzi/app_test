@@ -2,7 +2,7 @@ import 'package:agenda_canchas/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import '../screens/scheduling_screen.dart';
-import '../screens/splash_screen.dart';
+
 
 
 Route<dynamic>? onGeneratedRoutes(RouteSettings settings) {
@@ -24,7 +24,6 @@ Route<dynamic>? onGeneratedRoutes(RouteSettings settings) {
 }
 
 var customRoutes = <String, Widget>{
-    "splash": const SplashScreen(),
     "home"  : const HomeScreen(),
     "Scheduling"  :  SchedulingScreen(),
 };

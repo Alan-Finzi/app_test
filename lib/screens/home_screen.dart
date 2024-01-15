@@ -81,11 +81,11 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             );
           } else if (snapshot.hasError) {
-            return Center(
+            return const Center(
               child: Text('Error al cargar datos'),
             );
           } else if (!snapshot.hasData || (snapshot.data as List).isEmpty) {
-            return Center(
+            return const Center(
               child: Text('No hay agendamientos disponibles'),
             );
           } else {
